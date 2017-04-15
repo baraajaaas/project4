@@ -24,11 +24,11 @@ protected:
 public:
 	hashtable();
 	~hashtable();
-	LinkedList* searchOne(string key);
+	LinkedList* searchOne(string key, string value);
 	Node* searchR(string key);
 	void insertOne(string key, string value);
 	void insert(string key, string value);
-	void removeOne(string data);
+	void removeOne(string key, string value);
 	void remove(string key);
 	void print();
 	

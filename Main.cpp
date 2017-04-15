@@ -19,6 +19,9 @@ int main(){
 
 	ifstream in;
 	string text;
+	string choice;
+	string choice2;
+	string choice3;
 	
 	cout << "Which file would you like to open?" << endl;
 	cin >> text;
@@ -43,59 +46,52 @@ int main(){
 	in.close();			
 		
 	table.print();
+       	cout << "How would you like to search?"  << endl;
+	cout << "one" << endl;
+	cout << "random" << endl;
+	cin >> choice;
+	cout << "what word would you like to search?" << endl;
+	cin >> choice2;
+	//	cin >> choice3;
 	
-
-	
-	//	hashtable test;
-
-	//	test.insert("<Start>", "<Sentence>");
-	//	test.insert("<Sentence>","<Actor> <Verb> <Actor>");
-	//	test.insert("<Sentence>","<Sentence> and <Sentence>");
-	//	test.insert("<Actor>", "the boy");
-	//	test.insert("<Actor>", "the girl");
-	//	test.insert("<Actor>", "a postman");
-	//	test.insert("<Actor>", "the librarian");
-
-	//	test.insert("<Verb>", "kicked");
-	//	test.insert("<Verb>", "waved to");
-	//	test.insert("<Verb>", "laughed at");
-	//	test.insert("<Verb>", "annoyed");
-
-	//	test.insert("<Actor>", "the programmer");
-	//	test.insert("<Actor>", "the engineer");
-	//	test.insert("<Actor>", "a scientist");
-	//	test.insert("<Actor>", "an aborist");
-
-	//	test.insert("<Adjective>", "fat");
-	//	test.insert("<Adjective>", "long");
-	//	test.insert("<Adjective>", "short");
-	//	test.insert("<Adjective>", "clean");
-	//	test.insert("<Adjective>", "big");
-	//	test.insert("<Adjective>", "huge");
-	//	test.insert("<Adjective>", "small");
-	//	test.insert("<Adjective>", "tiny");
-
-
-	//	test.print();
+	if (choice == "one"){
+	  LinkedList* result = table.searchOne(choice2);
+	table.print();
+	}
+	else{
+       	Node* result =table.searchR(choice2);
+       	cout << (result == NULL ?  string("Nothing") : result->getWord()) << endl;
+	}
 
 	
-	//	cout << "what word would you like  search for?" << endl;
-	//LinkedList* result = test.searchOne("<Actor>");
-	//	Node* result =test.searchR("<Actor>");
-	//	cout << result->getWord() << endl;
+	cout << "How would you like to remove?" << endl;
+	cout << "one" << endl;
+	cout << "entire" << endl;
+	cin >> choice;
+	
+	if(choice == "one"){
+        cout << "What word would like to remove" << endl;
+	cin >> choice2;
+	cin >> choice3; 
+	table.removeOne(choice2, choice3);
+	  table.print();
+	}
+	else{
+	  table.remove(choice2);
+	
+		table.print();
+	}
+	
+	cout << "What word type of would would  you like to insert?" << endl;
+	cout << "Actor, Verb, Adjective" << endl;
 
-	//cout << "What word would you like to remove?" << endl;
-	// test.removeOne("<Adjective>");
-	//test.remove("<Adjective>");
+	cin >> choice;
+	cout << "What word would you like to put in?" << endl;
+	cin >> choice2;
+	table.insertOne(choice2, choice3);
+	table.print();
 	
-	//test.print();
-
-	
-	//cout << "What word would you like to insert?" << endl;
-	//test.insertOne("<Verb>", "cries");
-	//	test.print();
-	
-	//	system("PAUSE");
+	system("PAUSE");
 	return 0;
 }
 

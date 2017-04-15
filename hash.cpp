@@ -17,6 +17,7 @@ int hashtable::hash(string key){
 }
 LinkedList* hashtable::searchOne(string key){
 	int index = hash(key);
+	
 
 	return &Hash[index];
        
@@ -60,14 +61,14 @@ void hashtable::insertOne(string key, string value){
 void hashtable::insert(string key, string value){
 	int index = hash(key);
 
-	cout << "Inserting " << value << " at index " << index << "\n";
+	//	cout << "Inserting " << value << " at index " << index << "\n";
 	
 	Hash[index].insert(value);
 }
 
-void hashtable::removeOne(string key){
+void hashtable::removeOne(string key, string value){
    int index = hash(key);
-   Hash[index].pop();
+   Hash[index].remove(value);
 
 }
 
@@ -75,10 +76,6 @@ void hashtable::remove(string key){
   	int index = hash(key);
   	Hash[index].~LinkedList();
   	Hash[index] = LinkedList();
-
-  
-  //int index = hash(key);
-  // Hash[index].pop();
 
 }
 void hashtable::print(){

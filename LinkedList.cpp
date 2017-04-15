@@ -38,8 +38,8 @@ void LinkedList::pop(){
 void LinkedList::print()
 {
 	Node *ptr = head;
-	cout << "Printing node\n";
-	cout << "{ ";
+       
+
 	while (ptr != NULL) {
 		cout << ptr->getWord() << ", ";
 		ptr = ptr->getNext();
@@ -101,11 +101,3 @@ void LinkedList::remove(string L)
 		}
 	}
 }
-
-
-/*void setKey(string k){
-	key = k;
-}
-string getKey(){
-	return key;
-}*/
