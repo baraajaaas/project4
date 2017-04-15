@@ -1,0 +1,6 @@
+<Start> : <Sentence>
+<Sentence> : <Actor> <Verb> <Actor> | <Sentence> and <Sentence>
+<Actor> : the boy | the girl | a postman | the librarian 
+<Verb> : kicked | waved to | laughed at | annoyed
+<Actor> : the programmer | the engineer | a scientist | an arborist
+<Adjective> : fat | long | short | clean | big | huge | small | tiny
