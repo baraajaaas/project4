@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-g++ -o main Main.cpp Node.cpp LinkedList.cpp hash.cpp
+g++ -o main -std=c++14 Main.cpp Node.cpp LinkedList.cpp hash.cpp
