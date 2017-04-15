@@ -48,7 +48,6 @@ Node* hashtable::searchR(string key){
 		return temp;
 
 	}
-	
 }
 
 void hashtable::insertOne(string key, string value){
@@ -60,9 +59,6 @@ void hashtable::insertOne(string key, string value){
 
 void hashtable::insert(string key, string value){
 	int index = hash(key);
-
-	//	cout << "Inserting " << value << " at index " << index << "\n";
-	
 	Hash[index].insert(value);
 }
 
@@ -81,7 +77,8 @@ void hashtable::remove(string key){
 void hashtable::print(){
 	for(int i = 0; i < SIZE; i++){
 		if(Hash[i].gethead() != NULL){
-			Hash[i].print();
+		  cout << i << ": ";
+		  Hash[i].print();
 		}
 	}
 }

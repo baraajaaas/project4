@@ -44,7 +44,7 @@ void LinkedList::print()
 		cout << ptr->getWord() << ", ";
 		ptr = ptr->getNext();
 	}
-	cout << " }" << endl;
+	cout << endl;
 }
 
 void LinkedList::prepend(string L)

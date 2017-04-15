@@ -24,7 +24,7 @@ protected:
 public:
 	hashtable();
 	~hashtable();
-	LinkedList* searchOne(string key, string value);
+	LinkedList* searchOne(string key);
 	Node* searchR(string key);
 	void insertOne(string key, string value);
 	void insert(string key, string value);
