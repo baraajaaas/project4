@@ -1,3 +1,4 @@
+// Author: Jacob Barajas
 #include <iostream>
 #include <cstdlib>
 #include <string>
