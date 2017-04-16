@@ -7,7 +7,6 @@
 #include <sstream>
 #include "hash.h"
 #include "node.h"
-#include <vector>
 
 using namespace std;
 
